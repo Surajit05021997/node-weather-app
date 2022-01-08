@@ -21,7 +21,7 @@ formElement.addEventListener('submit', (e) => {
   loadingElement.textContent = 'Loading...';
   successMsgElement.textContent = '';
   errorMsgElement.textContent = '';
-  fetch(`http://localhost:3000/weather?address=${searchLocation}`).then((response) => {
+  fetch(`/weather?address=${searchLocation}`).then((response) => {
   response.json().then((data) => {
     loadingElement.textContent = '';
     if(data.error) {
